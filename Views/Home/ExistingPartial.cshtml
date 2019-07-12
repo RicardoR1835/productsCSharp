@@ -1,0 +1,10 @@
+@using productsNcategoriescSharp.Models;
+@model List<Product>;
+<div class="login d-inline-block">   
+    <h3 class="text-center">Existing Products</h3>
+    <br>
+    @foreach (var prod in @ViewBag.Products)
+    {
+        <p><a href="/products/@prod.ProductId">@prod.Name</a></p>
+    }
+</div>

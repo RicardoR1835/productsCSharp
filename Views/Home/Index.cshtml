@@ -1,0 +1,25 @@
+﻿@model productsNcategoriescSharp.Models.Product
+<br>
+<h1 class="text-center"><a href="/">Products</a> | <a href="/categories">Category</a></h1>
+<br>
+<br>
+<div class="container d-flex justify-content-around">
+    <div class="registration">
+        <form asp-action="CreateProduct" asp-controller="Home" method="POST">
+            <h2>New Product</h2>
+            <br>
+            <span style="color: red;" asp-validation-for="Name"></span>
+            <input class="form-control" asp-for="Name" placeholder="Name">
+            <br>
+            <span style="color: red;" asp-validation-for="Description"></span>
+            <input class="form-control" asp-for="Description" placeholder="Description">
+            <br>
+            <span style="color: red;" asp-validation-for="Price"></span>
+            <input class="form-control" asp-for="Price" placeholder="Price">
+            <br>
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+    <partial name="ExistingPartial"></partial>
+    
+</div>

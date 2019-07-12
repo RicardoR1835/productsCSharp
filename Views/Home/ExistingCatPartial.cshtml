@@ -1,0 +1,10 @@
+@using productsNcategoriescSharp.Models;
+@model List<Category>;
+<div class="login d-inline-block">   
+    <h3 class="text-center">Existing Categories</h3>
+    <br>
+    @foreach (var cat in @ViewBag.Category)
+    {
+        <p><a href="/category/@cat.CategoryId">@cat.Name</a></p>
+    }
+    </div>
